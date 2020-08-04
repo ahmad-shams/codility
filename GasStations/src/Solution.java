@@ -1,3 +1,4 @@
+// https://app.codility.com/programmers/task/gas_stations/
 public class Solution {
     public int solution(int[] D, int[] P, int T) {
         final int LIMIT = 1000000000;
@@ -37,21 +38,9 @@ public class Solution {
             totalPaid += currentPaid;
             if (currentPaid > LIMIT || currentPaid < 0 || totalPaid > LIMIT || totalPaid < 0 ) {
                 return -2;
-            }
-            //System.out.println("R=" + R[K] + ", P=" + P[K] + ", D=" + D[K] + ", L=" + L[K] + ", A=" + A[K] + ", currentPaid=" + currentPaid + ", totalPaid=" + totalPaid);
+            }            
         }
-
-
         return totalPaid;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(new Solution().solution(new int[]{10, 9, 8}, new int[]{2, 1, 3}, 15));
-        //System.out.println(new Solution().solution(new int[]{15, 10, 2}, new int[]{2, 1, 3}, 15));
-        //System.out.println(new Solution().solution(new int[]{10, 10, 10}, new int[]{5, 6, 6}, 30));
-        //System.out.println(new Solution().solution(new int[]{4}, new int[]{4}, 1));
-        System.out.println(new Solution().solution(new int[]{10, 9, 8}, new int[]{5, 6, 4}, 20));
-        //System.out.println(new Solution().solution(new int[]{10, 10, 10, 10, 10}, new int[]{6, 5, 6, 7, 3}, 25));
     }
 }
 
